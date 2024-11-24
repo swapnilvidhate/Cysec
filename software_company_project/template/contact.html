@@ -1,0 +1,147 @@
+{% include "navbar.html" %}
+
+<!-- header -->
+<header class="header-page-bg overlay-shape">
+    <!-- header-bottom-shape -->
+    <div class="header-bottom-shape"></div>
+    <div class="container">
+        <div class="header-page-content">
+            <small class="line-shape-bg color-white">Cysec</small>
+            <h1 class="color-white">Contact Us</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- .end header -->
+<!-- contact-section -->
+<section class="contact-section">
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <div class="col-12 col-md-5 p-0">
+                <div class="contact-item contact-item-dark p-tb-100 full-height">
+                    <div class="contact-item-info">
+                        <h2 class="color-white">Contact Us</h2>
+                        <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="contact-info-list">
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-phone-call"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3><a href="tel:0061-665-66785">+61 665 66785</a></h3>
+                                    <p>Call Now!</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-contact-book"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3>Level 2, 11 York St, Sydney 2000</h3>
+                                    <p>Address</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-envelope-1"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3><a
+                                            href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#a1c8cfc7ce93919395e1c2d8d2c4c28fc2cecc"><span
+                                                class="__cf_email__"
+                                                data-cfemail="70191e161f424042443013090315135e131f1d">[email&#160;protected]</span></a>
+                                    </h3>
+                                    <p>Email Now</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-7 p-0">
+                <div class="contact-item contact-item-details p-tb-100">
+                    <div class="contact-item-details-inner">
+                        <form method="post" action="/save_form/">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="name">Name*</label>
+                                            <input type="text" name="user_name" id="name" class="form-control" required
+                                                data-error="Please enter your name" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="phone_number">Phone*</label>
+                                            <input type="text" name="user_phone_number" id="phone_number" required
+                                                data-error="Please enter your phone number" class="form-control" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="email">Email Address*</label>
+                                            <input type="email" name="user_email" id="email" class="form-control"
+                                                required data-error="Please enter your email" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="msg_subject">Subject*</label>
+                                            <input type="text" name="user_msg_subject" id="msg_subject"
+                                                class="form-control" required data-error="Please enter your subject" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="message">Message</label>
+                                            <textarea name="user_message" class="form-control" id="message"
+                                                rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="input-checkbox mb-20">
+                                        <input type="checkbox" id="contact1">
+                                        <label for="contact1">Accept <a href="terms-conditions.html">Terms &
+                                                Conditions</a> and <a href="privacy-policy-2.html">Privacy
+                                                Policy</a></label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <button class="btn">
+                                        Send Message <i class="flaticon-right-arrow-2"></i>
+                                    </button>
+                                    <div id="msgSubmit"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end contact-section -->
+{% include "footer.html" %}
